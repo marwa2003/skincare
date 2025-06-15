@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Routine Hebdomadaire - Peau seche</title>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Quicksand', sans-serif;
+      background: linear-gradient(to right, #fbe3e8, #e1d6f0);
+      margin: 0;
+      padding: 20px;
+      color: #46295a;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 2.8em;
+      margin-bottom: 20px;
+      color: #843b9e;
+    }
+
+    .calendrier {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 35px;
+    }
+
+    .calendrier a {
+      text-decoration: none;
+      background: #e5d1f2;
+      padding: 10px 18px;
+      border-radius: 15px;
+      color: #843b9e;
+      font-weight: bold;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      transition: background 0.3s, transform 0.3s;
+    }
+
+    .calendrier a:hover {
+      background: #d4b4ed;
+      transform: translateY(-3px);
+    }
+
+    .jour {
+      background: #fff;
+      border-radius: 20px;
+      padding: 30px;
+      margin-bottom: 40px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+      animation: fadeIn 0.7s ease-in-out;
+      transition: transform 0.3s;
+    }
+
+    .jour:hover {
+      transform: scale(1.02);
+    }
+
+    h2 {
+      font-size: 1.8em;
+      color: #aa5dc1;
+      margin-bottom: 15px;
+    }
+
+    p {
+      font-size: 1.05em;
+      line-height: 1.6;
+    }
+
+    .galerie-section {
+      overflow: hidden;
+      margin: 20px 0;
+      border-radius: 15px;
+    }
+
+    .galerie-container {
+      width: 100%;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .galerie-track {
+      display: flex;
+      animation: scrollGalerie 30s linear infinite;
+      width: max-content;
+    }
+
+    .galerie-track .image {
+      flex: 0 0 auto;
+      width: 220px;
+      height: 160px;
+      margin: 0 8px;
+      overflow: hidden;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+    }
+
+    .galerie-track .image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    @keyframes scrollGalerie {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    footer {
+      background-color: var(--lavande);
+      text-align: center;
+      padding: 20px;
+      color: #4b327a;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>💖 Routine Hebdomadaire - Peau Sèche</h1>
+
+  <div class="calendrier">
+    <a href="#dimanche">Dim</a>
+    <a href="#lundi">Lun</a>
+    <a href="#mardi">Mar</a>
+    <a href="#mercredi">Mer</a>
+    <a href="#jeudi">Jeu</a>
+    <a href="#vendredi">Ven</a>
+    <a href="#samedi">Sam</a>
+  </div>
+
+  <div class="jour" id="dimanche">
+    <h2>🌞 Dimanche - Cocooning & Nutrition</h2>
+    <section class="galerie-section">
+      <div class="galerie-container">
+        <div class="galerie-track">
+            <div class="image"><img src="r1.jpg" alt="Image 1"></div>
+            <div class="image"><img src="r4.jpg" alt="Image 2"></div>
+            <div class="image"><img src="r5.jpg" alt="Image 3"></div>
+            <div class="image"><img src="r1.jpg" alt="Image 4"></div>
+            <div class="image"><img src="r4.jpg" alt="Image 5"></div>
+            <div class="image"><img src="r5.jpg" alt="Image 6"></div>
+            <!-- Répétition -->
+            <div class="image"><img src="r1.jpg" alt="Image 1"></div>
+            <div class="image"><img src="r4.jpg" alt="Image 2"></div>
+            <div class="image"><img src="r5.jpg" alt="Image 3"></div>
+            <div class="image"><img src="r1.jpg" alt="Image 4"></div>
+            <div class="image"><img src="r4.jpg" alt="Image 5"></div>
+            <div class="image"><img src="r5.jpg" alt="Image 6"></div>
+          </div>
+      </div>
+    </section>
+    <p>
+      • Nettoyant crémeux sans savon<br>
+      • Masque hydratant profond (beurre de karité, avoine)<br>
+      • Brume hydratante<br>
+      • Huile nourrissante ou crème riche<br>
+      <strong>Conseil :</strong> Prends du temps pour toi avec un massage du visage.
+    </p>
+  </div>
+
+  <div class="jour" id="lundi">
+    <h2>🧼 Lundi - Douceur & Protection</h2>
+    <section class="galerie-section">
+      <div class="galerie-container">
+        <div class="galerie-track">
+            <div class="image"><img src="r1.jpg" alt="Image 1"></div>
+            <div class="image"><img src="r4.jpg" alt="Image 2"></div>
+            <div class="image"><img src="r5.jpg" alt="Image 3"></div>
+            <div class="image"><img src="r1.jpg" alt="Image 4"></div>
+            <div class="image"><img src="r4.jpg" alt="Image 5"></div>
+            <div class="image"><img src="r5.jpg" alt="Image 6"></div>
+            <!-- Répétition -->
+            <div class="image"><img src="r1.jpg" alt="Image 1"></div>
+            <div class="image"><img src="r4.jpg" alt="Image 2"></div>
+            <div class="image"><img src="r5.jpg" alt="Image 3"></div>
+            <div class="image"><img src="r1.jpg" alt="Image 4"></div>
+            <div class="image"><img src="r4.jpg" alt="Image 5"></div>
+            <div class="image"><img src="r5.jpg" alt="Image 6"></div>
+          </div>
+      </div>
+    </section>
+    <p>
+      • Nettoyant crème hydratant<br>
+      • Tonique apaisant (camomille, rose)<br>
+      • Sérum à l'acide hyaluronique<br>
+      • Crème épaisse + SPF 30
+    </p>
+  </div>
+
+  <div class="jour" id="mardi">
+    <h2>💧 Mardi - Hydratation en Profondeur</h2>
+    <section class="galerie-section">
+      <div class="galerie-container">
+        <div class="galerie-track">
+            <div class="image"><img src="r1.jpg" alt="Image 1"></div>
+            <div class="image"><img src="r4.jpg" alt="Image 2"></div>
+            <div class="image"><img src="r5.jpg" alt="Image 3"></div>
+            <div class="image"><img src="r1.jpg" alt="Image 4"></div>
+            <div class="image"><img src="r4.jpg" alt="Image 5"></div>
+            <div class="image"><img src="r5.jpg" alt="Image 6"></div>
+            <!-- Répétition -->
+            <div class="image"><img src="r1.jpg" alt="Image 1"></div>
+            <div class="image"><img src="r4.jpg" alt="Image 2"></div>
+            <div class="image"><img src="r5.jpg" alt="Image 3"></div>
+            <div class="image"><img src="r1.jpg" alt="Image 4"></div>
+            <div class="image"><img src="r4.jpg" alt="Image 5"></div>
+            <div class="image"><img src="r5.jpg" alt="Image 6"></div>
+          </div>
+      </div>
+    </section>
+    <p>
+      • Nettoyage doux<br>
+      • Sérum réparateur (céramides)<br>
+      • Masque crème nuit ou feuille hydratante<br>
+      • Huile nourrissante ou baume de nuit
+    </p>
+  </div>
+
+  <div class="jour" id="mercredi">
+    <h2>🧖‍♀️ Mercredi - Exfoliation Douce</h2>
+    <section class="galerie-section">
+      <div class="galerie-container">
+        <div class="galerie-track">
+            <div class="image"><img src="r1.jpg" alt="Image 1"></div>
+            <div class="image"><img src="r4.jpg" alt="Image 2"></div>
+            <div class="image"><img src="r5.jpg" alt="Image 3"></div>
+            <div class="image"><img src="r1.jpg" alt="Image 4"></div>
+            <div class="image"><img src="r4.jpg" alt="Image 5"></div>
+            <div class="image"><img src="r5.jpg" alt="Image 6"></div>
+            <!-- Répétition -->
+            <div class="image"><img src="r1.jpg" alt="Image 1"></div>
+            <div class="image"><img src="r4.jpg" alt="Image 2"></div>
+            <div class="image"><img src="r5.jpg" alt="Image 3"></div>
+            <div class="image"><img src="r1.jpg" alt="Image 4"></div>
+            <div class="image"><img src="r4.jpg" alt="Image 5"></div>
+            <div class="image"><img src="r5.jpg" alt="Image 6"></div>
+          </div>
+      </div>
+    </section>
+    <p>
+      • Nettoyant lait<br>
+      • Gommage très doux (enzymatique ou grains fins)<br>
+      • Masque hydratant<br>
+      • Crème protectrice<br>
+      <strong>Conseil :</strong> Pas plus d’une exfoliation par semaine.
+    </p>
+  </div>
+
+  <div class="jour" id="jeudi">
+    <h2>🌿 Jeudi - Calme et Réparation</h2>
+    <section class="galerie-section">
+      <div class="galerie-container">
+        <div class="galerie-track">
+            <div class="image"><img src="r1.jpg" alt="Image 1"></div>
+            <div class="image"><img src="r4.jpg" alt="Image 2"></div>
+            <div class="image"><img src="r5.jpg" alt="Image 3"></div>
+            <div class="image"><img src="r1.jpg" alt="Image 4"></div>
+            <div class="image"><img src="r4.jpg" alt="Image 5"></div>
+            <div class="image"><img src="r5.jpg" alt="Image 6"></div>
+            <!-- Répétition -->
+            <div class="image"><img src="r1.jpg" alt="Image 1"></div>
+            <div class="image"><img src="r4.jpg" alt="Image 2"></div>
+            <div class="image"><img src="r5.jpg" alt="Image 3"></div>
+            <div class="image"><img src="r1.jpg" alt="Image 4"></div>
+            <div class="image"><img src="r4.jpg" alt="Image 5"></div>
+            <div class="image"><img src="r5.jpg" alt="Image 6"></div>
+          </div>
+      </div>
+    </section>
+    <p>
+      • Nettoyage doux à l'eau tiède<br>
+      • Tonique floral (rose, lavande)<br>
+      • Sérum apaisant (niacinamide, aloé)<br>
+      • Crème cocooning pour peaux sensibles
+    </p>
+  </div>
+
+  <div class="jour" id="vendredi">
+    <h2>☀️ Vendredi - Luminosité & Protection</h2>
+    <section class="galerie-section">
+      <div class="galerie-container">
+        <div class="galerie-track">
+            <div class="image"><img src="r1.jpg" alt="Image 1"></div>
+            <div class="image"><img src="r4.jpg" alt="Image 2"></div>
+            <div class="image"><img src="r5.jpg" alt="Image 3"></div>
+            <div class="image"><img src="r1.jpg" alt="Image 4"></div>
+            <div class="image"><img src="r4.jpg" alt="Image 5"></div>
+            <div class="image"><img src="r5.jpg" alt="Image 6"></div>
+            <!-- Répétition -->
+            <div class="image"><img src="r1.jpg" alt="Image 1"></div>
+            <div class="image"><img src="r4.jpg" alt="Image 2"></div>
+            <div class="image"><img src="r5.jpg" alt="Image 3"></div>
+            <div class="image"><img src="r1.jpg" alt="Image 4"></div>
+            <div class="image"><img src="r4.jpg" alt="Image 5"></div>
+            <div class="image"><img src="r5.jpg" alt="Image 6"></div>
+          </div>
+      </div>
+    </section>
+    <p>
+      • Nettoyant doux<br>
+      • Sérum à la vitamine C<br>
+      • Crème riche anti-âge<br>
+      • Écran solaire hydratant SPF 50
+    </p>
+  </div>
+
+  <div class="jour" id="samedi">
+    <h2>🌺 Samedi - Chouchoutage Total</h2>
+    <section class="galerie-section">
+      <div class="galerie-container">
+        <div class="galerie-track">
+            <div class="image"><img src="r1.jpg" alt="Image 1"></div>
+            <div class="image"><img src="r4.jpg" alt="Image 2"></div>
+            <div class="image"><img src="r5.jpg" alt="Image 3"></div>
+            <div class="image"><img src="r1.jpg" alt="Image 4"></div>
+            <div class="image"><img src="r4.jpg" alt="Image 5"></div>
+            <div class="image"><img src="r5.jpg" alt="Image 6"></div>
+            <!-- Répétition -->
+            <div class="image"><img src="r1.jpg" alt="Image 1"></div>
+            <div class="image"><img src="r4.jpg" alt="Image 2"></div>
+            <div class="image"><img src="r5.jpg" alt="Image 3"></div>
+            <div class="image"><img src="r1.jpg" alt="Image 4"></div>
+            <div class="image"><img src="r4.jpg" alt="Image 5"></div>
+            <div class="image"><img src="r5.jpg" alt="Image 6"></div>
+          </div>
+      </div>
+    </section>
+    <p>
+      • Bain vapeur doux<br>
+      • Masque nourrissant (huile d’argan, beurre de cacao)<br>
+      • Massage du visage<br>
+      • Crème réparatrice de nuit<br>
+      <strong>Astuce :</strong> Détends-toi avec un peu de musique douce 🌙
+    </p>
+  </div>
+
+  <footer>
+    &copy; 2025 SkinAura – Ta peau, ta lumière 🌟
+  </footer>
+
+</body>
+</html>

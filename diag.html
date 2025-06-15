@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Diagnostic de Peau - SkinAura</title>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --lavande: #d8c4f2;
+      --lavande-fonce: #b497d6;
+      --rose-pale: #fce4ec;
+      --blanc: #fff;
+      --gris: #555;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Quicksand', sans-serif;
+      background: linear-gradient(to bottom right, var(--lavande), var(--rose-pale));
+      color: var(--gris);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+      padding: 30px 20px;
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    header h1 {
+      color: #4b327a;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 1.1em;
+      color: #6a4c93;
+    }
+
+    .container {
+      background-color: var(--blanc);
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      max-width: 500px;
+      text-align: center;
+    }
+
+    .progress-container {
+      height: 10px;
+      background-color: #eee;
+      border-radius: 10px;
+      overflow: hidden;
+      margin-bottom: 25px;
+    }
+
+    .progress-bar {
+      height: 100%;
+      background-color: var(--lavande-fonce);
+      width: 0%;
+      transition: width 0.4s ease;
+    }
+
+    .question {
+      font-size: 1.2em;
+      margin-bottom: 20px;
+      color: #444;
+    }
+
+    .answers button {
+      display: block;
+      width: 100%;
+      margin: 10px 0;
+      padding: 12px;
+      font-size: 1em;
+      border: none;
+      border-radius: 30px;
+      background-color: var(--lavande-fonce);
+      color: white;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .answers button:hover {
+      background-color: #9e7bc6;
+    }
+
+    .end-message {
+      font-size: 1.2em;
+      color: #4b327a;
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Diagnostic de Peau</h1>
+    <p>Réponds à quelques questions pour découvrir ta routine idéale 🌟</p>
+  </header>
+
+  <div class="container">
+    <div class="progress-container">
+      <div class="progress-bar" id="progressBar"></div>
+    </div>
+
+    <div id="quiz">
+      <div class="question" id="question"></div>
+      <div class="answers" id="answers"></div>
+    </div>
+  </div>
+
+  <script>
+    const questions = [
+      {
+        text: "Quelle est ta principale préoccupation ?",
+        options: ["🌿 Acné", "💧 Sécheresse", "🌀 Rides", "🌸 Sensibilité"]
+      },
+      {
+        text: "Quel est ton type de peau ?",
+        options: ["🍃 Sèche", "☀️ Grasse", "⚖️ Mixte", "🧖‍♀️ Sensible"]
+      },
+      {
+        text: "À quelle fréquence prends-tu soin de ta peau ?",
+        options: ["🕓 Tous les jours", "🕑 Quelques fois par semaine", "⏰ Rarement"]
+      },
+      {
+        text: "Utilises-tu des produits naturels ?",
+        options: ["🌱 Oui", "🧪 Non", "🧴 Parfois"]
+      }
+    ];
+
+    let current = 0;
+    let responses = [];
+
+    function showQuestion(index) {
+      const q = questions[index];
+      document.getElementById("question").textContent = q.text;
+      const answers = document.getElementById("answers");
+      answers.innerHTML = "";
+      q.options.forEach(option => {
+        const btn = document.createElement("button");
+        btn.textContent = option;
+        btn.onclick = () => {
+          responses.push(option);
+          nextQuestion();
+        };
+        answers.appendChild(btn);
+      });
+      document.getElementById("progressBar").style.width = ((index) / questions.length) * 100 + "%";
+    }
+
+    function nextQuestion() {
+      current++;
+      if (current < questions.length) {
+        showQuestion(current);
+      } else {
+        const result = analyserResultat(responses);
+        window.location.href = `resultat-${result}.html`;
+      }
+    }
+
+    function analyserResultat(reponses) {
+      const type = reponses[1]; // 2ème question = type de peau
+      if (type.includes("Grasse")) return "grasse";
+      if (type.includes("Sèche")) return "seche";
+      if (type.includes("Mixte")) return "mixte";
+      if (type.includes("Sensible")) return "sensible";
+      return "grasse"; // valeur par défaut
+    }
+
+    showQuestion(current);
+  </script>
+
+</body>
+</html>

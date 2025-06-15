@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Connexion - SkinAura</title>
+  
+  <!-- Fonts + Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" referrerpolicy="no-referrer" />
+
+  <style>
+    :root {
+      --lavande: #d8c4f2;
+      --lavande-foncé: #b497d6;
+      --rose-pale: #fce4ec;
+      --blanc: #fff;
+      --gris: #444;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Quicksand', sans-serif;
+      background: linear-gradient(to bottom right, var(--lavande), var(--rose-pale));
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .container {
+      background-color: var(--blanc);
+      padding: 40px;
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      max-width: 400px;
+    }
+
+    h2 {
+      text-align: center;
+      color: var(--lavande-foncé);
+      margin-bottom: 25px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: 600;
+      max-width: 320px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .input-group {
+      position: relative;
+      margin: 0 auto 20px;
+      max-width: 320px;
+      width: 100%;
+    }
+
+    .input-group i {
+      position: absolute;
+      left: 12px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: #aaa;
+    }
+
+    .input-group input {
+      width: 100%;
+      padding: 10px 10px 10px 38px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      font-size: 1em;
+    }
+
+    .btn {
+      display: block;
+      margin: 15px auto 0;
+      width: 100%;
+      max-width: 320px;
+      padding: 12px;
+      background-color: var(--lavande-foncé);
+      color: var(--blanc);
+      border: none;
+      border-radius: 10px;
+      font-size: 1em;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #9f7bc4;
+    }
+
+    .link {
+      text-align: center;
+      margin-top: 15px;
+      font-size: 0.9em;
+    }
+
+    .link a {
+      color: var(--lavande-foncé);
+      text-decoration: none;
+    }
+
+    .link a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 420px) {
+      .input-group,
+      label,
+      .btn {
+        max-width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h2>Connexion</h2>
+    <form action="login.php" method="POST">
+      <label for="email">Adresse e-mail</label>
+      <div class="input-group">
+        <i class="fa-solid fa-envelope"></i>
+        <input type="email" id="email" name="email" placeholder="exemple@email.com" required />
+      </div>
+
+      <label for="password">Mot de passe</label>
+      <div class="input-group">
+        <i class="fa-solid fa-lock"></i>
+        <input type="password" id="password" name="password" placeholder="Mot de passe" required />
+      </div>
+
+      <button type="submit" class="btn">Se connecter</button>
+    </form>
+
+    <div class="link">
+      Pas encore de compte ? <a href="i.html">Créer un compte</a>
+    </div>
+  </div>
+
+</body>
+</html>

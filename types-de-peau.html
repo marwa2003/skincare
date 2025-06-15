@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Types de peau & Avis d'experts – SkinAura</title>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    :root {
+      --lavande: #d8c4f2;
+      --lavande-foncé: #b497d6;
+      --rose-pale: #fce4ec;
+      --blanc: #fff;
+      --gris: #555;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Quicksand', sans-serif;
+      background: var(--blanc);
+      color: var(--gris);
+      line-height: 1.6;
+      scroll-behavior: smooth;
+    }
+
+    header {
+      background: linear-gradient(135deg, var(--lavande), var(--rose-pale));
+      padding: 60px 20px;
+      text-align: center;
+      animation: fadeInDown 1s ease-in-out;
+    }
+
+    header h1 {
+      font-size: 3em;
+      color: #4b327a;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 1.2em;
+      color: #333;
+    }
+
+    section {
+      padding: 50px 20px;
+      max-width: 1100px;
+      margin: auto;
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    .skin-type {
+      background-color: #faf7ff;
+      border-left: 6px solid var(--lavande-foncé);
+      border-radius: 15px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      margin-bottom: 30px;
+      padding: 20px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.05);
+      transition: transform 0.3s;
+    }
+
+    .skin-type:hover {
+      transform: translateY(-5px);
+    }
+
+    .skin-type img {
+  width: 220px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-right: 30px;
+}
+
+    .skin-type h2 {
+      color: var(--lavande-foncé);
+      margin-bottom: 10px;
+    }
+
+    .skin-type p {
+      font-size: 1em;
+    }
+
+    .experts, .faq {
+      background: #f8f3ff;
+      padding: 30px;
+      border-radius: 15px;
+      margin-top: 50px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+    }
+
+    .experts h2,
+    .faq h2 {
+      color: #4b327a;
+      margin-bottom: 20px;
+      font-size: 1.8em;
+    }
+
+    .faq p, .experts p {
+      margin-bottom: 15px;
+      font-size: 1em;
+    }
+
+    footer {
+      background: var(--lavande);
+      padding: 20px;
+      text-align: center;
+      color: #4b327a;
+      margin-top: 60px;
+    }
+
+    a {
+      color: #a076c7;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 768px) {
+      .skin-type {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .skin-type img {
+        margin-bottom: 20px;
+        margin-right: 0;
+      }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1><i class="fas fa-heartbeat"></i> Comprendre les types de peau</h1>
+    <p>Découvre ton type de peau & profite des conseils des dermatologues 🌿</p>
+  </header>
+
+  <section>
+    <div class="skin-type">
+      <img src="ds.jpg" alt="Peau sèche">
+      <div>
+        <h2><i class="fas fa-tint-slash"></i> Peau Sèche</h2>
+        <p>Elle manque de sébum, tiraille, pèle parfois. Elle a besoin de nutrition et de protection renforcée au quotidien.</p>
+      </div>
+    </div>
+
+    <div class="skin-type">
+      <img src="os.jpg" alt="Peau grasse">
+      <div>
+        <h2><i class="fas fa-oil-can"></i> Peau Grasse</h2>
+        <p>Elle produit trop de sébum, brille et peut être sujette aux imperfections. Il faut la purifier tout en l’hydratant.</p>
+      </div>
+    </div>
+
+    <div class="skin-type">
+      <img src="ms.jpg" alt="Peau mixte">
+      <div>
+        <h2><i class="fas fa-border-style"></i> Peau Mixte</h2>
+        <p>Zone T grasse et joues plus sèches ? Cette peau demande des soins équilibrés et localisés selon les zones.</p>
+      </div>
+    </div>
+
+    <div class="skin-type">
+      <img src="ss.jpg" alt="Peau sensible">
+      <div>
+        <h2><i class="fas fa-exclamation-circle"></i> Peau Sensible</h2>
+        <p>Réagit vite aux agressions extérieures, picote ou rougit facilement. Elle aime les textures douces et sans parfum.</p>
+      </div>
+    </div>
+
+    <div class="experts">
+      <h2><i class="fas fa-user-md"></i> Avis de nos experts</h2>
+      <p><strong>Dr. Lila Bensalem</strong> – « Il faut écouter sa peau, car elle évolue constamment. Une bonne routine commence par une bonne connaissance de soi. »</p>
+      <p><strong>Dr. Nadia Messaoudi</strong> – « On ne choisit pas une crème au hasard. Adapter chaque soin au type de peau, c’est la base. »</p>
+    </div>
+
+    <div class="faq">
+      <h2><i class="fas fa-question-circle"></i> Questions fréquentes</h2>
+      <p><strong>Comment savoir mon type de peau ?</strong><br>
+        Nettoie ton visage, attends 1h sans produit. Si tu brilles partout : grasse. Zone T seulement : mixte. Tiraillement : sèche. Rougeurs : sensible.
+      </p>
+      <p><strong>Est-ce que ça peut changer ?</strong><br>
+        Oui ! Hormones, saison, stress... ta peau évolue. Refais régulièrement un <a href="diag.html">diagnostic</a>.</p>
+      <p><strong>Un produit "peau grasse" peut assécher ?</strong><br>
+        Absolument ! D’où l’importance d’hydrater même une peau grasse avec des soins non-comédogènes.</p>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 SkinAura – Ta peau, ta lumière ✨
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Résultat - Peau Mixte</title>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --rose: #fce4ec;
+      --lavande: #d8c4f2;
+      --violet-foncé: #4b327a;
+      --bouton: #b497d6;
+      --bouton-hover: #9f7bc4;
+      --blanc: #ffffff;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Quicksand', sans-serif;
+      background: linear-gradient(to bottom right, var(--rose), var(--lavande));
+      color: var(--violet-foncé);
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    .box {
+      background: var(--blanc);
+      padding: 50px 30px;
+      border-radius: 20px;
+      max-width: 650px;
+      margin: auto;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    h1 {
+      font-size: 2.7em;
+      margin-bottom: 15px;
+      color: var(--violet-foncé);
+    }
+
+    p {
+      font-size: 1.2em;
+      margin-bottom: 20px;
+      line-height: 1.6;
+    }
+
+    .btn {
+      display: inline-block;
+      background-color: var(--bouton);
+      color: white;
+      padding: 14px 28px;
+      text-decoration: none;
+      border-radius: 50px;
+      font-weight: bold;
+      font-size: 1.1em;
+      transition: background-color 0.3s ease;
+      margin-top: 10px;
+    }
+
+    .btn:hover {
+      background-color: var(--bouton-hover);
+    }
+
+    .galerie-section {
+      margin-top: 70px;
+    }
+
+    .galerie-section h2 {
+      font-size: 2.2em;
+      margin-bottom: 25px;
+      color: var(--violet-foncé);
+    }
+
+    .galerie-container {
+      overflow: hidden;
+      position: relative;
+      width: 100%;
+    }
+
+    .galerie-track {
+      display: flex;
+      width: max-content;
+      animation: scrollInfinite 35s linear infinite;
+    }
+
+    .image {
+      flex: 0 0 auto;
+      width: 250px;
+      height: 200px;
+      margin-right: 20px;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s;
+    }
+
+    .image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .image:hover {
+      transform: scale(1.05);
+    }
+
+    @keyframes scrollInfinite {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 2.2em;
+      }
+
+      .image {
+        width: 180px;
+        height: 140px;
+      }
+
+      .btn {
+        padding: 10px 20px;
+        font-size: 1em;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <h1>🌸 Ta peau est mixte</h1>
+    <p>Ta peau combine des zones grasses (souvent la zone T) et des zones sèches ou normales ailleurs.</p>
+    <p><strong>Conseils :</strong> Nettoie avec un gel doux, applique une lotion équilibrante, et choisis une crème adaptée à chaque zone si besoin.</p>
+    <a href="routine-mixte.html" class="btn">Voir ma routine personnalisée</a>
+  </div>
+
+  <!-- Galerie infinie -->
+  <section class="galerie-section">
+    <h2>🌺 Prendre soin de chaque zone, c’est révéler ta vraie beauté.</h2>
+    <div class="galerie-container">
+      <div class="galerie-track">
+        <!-- Images à personnaliser -->
+        <div class="image"><img src="s1.jpg" alt="Image 1"></div>
+        <div class="image"><img src="s2.jpg" alt="Image 2"></div>
+        <div class="image"><img src="s3.jpg" alt="Image 3"></div>
+        <div class="image"><img src="s4.jpg" alt="Image 4"></div>
+        <div class="image"><img src="s5.jpg" alt="Image 5"></div>
+        <!-- Duplication pour effet infini -->
+        <div class="image"><img src="s1.jpg" alt="Image 1 bis"></div>
+        <div class="image"><img src="s2.jpg" alt="Image 2 bis"></div>
+        <div class="image"><img src="s3.jpg" alt="Image 3 bis"></div>
+        <div class="image"><img src="s4.jpg" alt="Image 4 bis"></div>
+        <div class="image"><img src="s5.jpg" alt="Image 5 bis"></div>
+      </div>
+    </div>
+  </section>
+</body>
+</html>

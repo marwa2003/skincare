@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SkinAura - Prends soin de ta peau</title>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --lavande: #d8c4f2;
+      --lavande-foncé: #b497d6;
+      --rose-pale: #fce4ec;
+      --blanc: #fff;
+      --gris: #555;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Quicksand', sans-serif;
+      background-color: var(--blanc);
+      color: var(--gris);
+      line-height: 1.6;
+    }
+
+    header {
+      background: linear-gradient(to right, var(--lavande), var(--rose-pale));
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    header img {
+  height: 60px;
+  width: auto;
+  transform: scale(5);
+  transform-origin:  center;
+  margin-top: 0.5cm;
+}
+
+
+   
+
+    header h1 {
+      color: #4b327a;
+      font-size: 3em;
+      margin-bottom: 10px;
+      margin-top: 1.5cm;
+    }
+
+    header p {
+      font-size: 1.2em;
+      color: #333;
+      max-width: 600px;
+      margin: 0 auto 20px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 24px;
+      background-color: var(--lavande-foncé);
+      color: var(--blanc);
+      text-decoration: none;
+      border-radius: 30px;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #a080c3;
+    }
+
+    .features {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 40px 20px;
+      background-color: #faf7ff;
+    }
+
+    .feature {
+      background-color: var(--blanc);
+      border-radius: 20px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+      padding: 30px;
+      margin: 15px;
+      max-width: 300px;
+      text-align: center;
+      transition: transform 0.3s;
+    }
+
+    .feature:hover {
+      transform: translateY(-5px);
+    }
+
+    .feature h3 {
+      color: var(--lavande-foncé);
+      margin-bottom: 10px;
+    }
+
+    section.testimonials,
+    section.why,
+    section.cta {
+      padding: 40px 20px;
+      background-color: #f8f3ff;
+      text-align: center;
+    }
+
+    .testimonial-box {
+      background-color: white;
+      border-radius: 15px;
+      padding: 20px;
+      margin: 10px;
+      max-width: 300px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    }
+
+    .testimonials-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    footer {
+      background-color: var(--lavande);
+      text-align: center;
+      padding: 20px;
+      color: #4b327a;
+    }
+
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2.2em;
+      }
+
+      .features {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="skinlogo.png" alt="Logo SkinAura">
+    <h1>Bienvenue sur SkinAura</h1>
+    <p>Votre coach beauté personnel pour une peau éclatante et saine au quotidien 🌸</p>
+    <a href="diag.html" class="btn">Commencer maintenant</a>
+  </header>
+
+  <section class="features" id="features">
+    <div class="feature">
+      <h3>Diagnostic Peau</h3>
+      <p>Un test rapide pour comprendre ton type de peau et tes besoins spécifiques.</p>
+    </div>
+    <div class="feature">
+      <h3>Routine Beauté</h3>
+      <p>Reçois une routine matin & soir personnalisée pour révéler l’éclat de ta peau.</p>
+    </div>
+    <div class="feature">
+      <h3>Conseils Experts</h3>
+      <p>Accède à des astuces beauté, des recettes naturelles et des bons plans produits.</p>
+    </div>
+  </section>
+
+  <section class="why">
+    <h2 style="color: #c3aee9; font-size: 2em; margin-bottom: 10px;">Pourquoi choisir SkinAura ?</h2>
+    <p style="max-width: 700px; margin: 0 auto; font-size: 1.1em;">
+      Parce que chaque peau mérite une attention personnalisée. SkinAura t’accompagne dans chaque étape de ta routine, avec des conseils fiables, des produits adaptés et un suivi continu. ✨
+    </p>
+  </section>
+
+  <section class="testimonials">
+    <h2 style="color: #4b327a; margin-bottom: 30px;">Ce que disent nos utilisatrices 💬</h2>
+    <div class="testimonials-container">
+      <div class="testimonial-box">
+        <p>“Depuis que j’utilise SkinAura, ma peau n’a jamais été aussi belle. Merci !”</p>
+        <strong>- Amel, 28 ans</strong>
+      </div>
+      <div class="testimonial-box">
+        <p>“J’ai trouvé une routine parfaite pour ma peau grasse grâce au test !”</p>
+        <strong>- Sarah, 22 ans</strong>
+      </div>
+      <div class="testimonial-box">
+        <p>“Les conseils naturels sont top et faciles à suivre 🧖‍♀️”</p>
+        <strong>- Nadia, 34 ans</strong>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta">
+    <h2 style="font-size: 2em; color: #4b327a;">Prête à révéler ta meilleure peau ?</h2>
+    <p style="margin: 10px 0 20px;">Explore les différents types de peau et découvre ce que recommandent les dermatologues 👩‍⚕️💡</p>
+    <a href="types-de-peau.html" class="btn">Découvrir les types de peau & avis d'experts</a>
+  </section>
+  
+
+  <footer>
+    &copy; 2025 SkinAura – Ta peau, ta lumière 🌟
+  </footer>
+
+</body>
+</html>
